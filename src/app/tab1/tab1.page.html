@@ -1,0 +1,54 @@
+
+<ion-content>
+
+<ion-card>        
+  <ion-card-content>
+
+      <table class="table table-striped">
+        <thead class="table mb-0"> 
+          <tr>
+              <th>No</th>
+              <th>NPM</th>
+              <th>Nama</th>
+              <th>Jurusan</th>
+              <th>Prodi</th>
+              <th>Kelas</th>
+              <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let siswa of GETSiswa; let i=index;">
+              <td>{{i+1}}</td>
+              <td hidden>{{siswa.id}}</td>
+              <td>{{siswa.npm}}</td>
+              <td>{{siswa.nama}}</td>
+              <td>{{siswa.jurusan}}</td>
+              <td>{{siswa.prodi}}</td>
+              <td>{{siswa.kelas}}</td>
+              <td>
+                <button color="secondary" type="submit" expand="block" routerLink="../tab3/{{siswa.npm}}" 
+                >
+                  <ion-icon name="open"></ion-icon>
+                  Edit
+                </button>
+
+                <!-- <ion-button type="submit" routerLink="/updateordelete/{{student.id}}" 
+                expand="block" shape="round" color="primary">Edit</ion-button>
+
+                <ion-button type="submit" shape="round" expand="block" color="danger" 
+                (click)="deleteData(student.npm)">Delete</ion-button> -->
+
+                <button type="submit" shape="round" expand="block" color="danger" 
+                (click)="deleteData(siswa.npm)">
+                  <ion-icon name="trash"></ion-icon>
+                  Delete
+                </button>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+
+        </ion-card-content>
+  </ion-card>
+
+</ion-content>

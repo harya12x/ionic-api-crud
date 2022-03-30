@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-title>
+          Tambah Data Mahasiswa
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+        <ion-card>
+          <ion-card-content>
+                  <div class="mb-3">
+                    <label class="form-label">Nomor Pokok Mahasiswa</label>
+                    <div class="border-left border-bottom border-right">
+                      <ion-input clearInput [(ngModel)]="npm" value="clear me"></ion-input>
+                    </div>
+                    <div class="form-text"><i>Silahkan masukan dengan format, ex: 1520001 </i></div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Nama</label>
+                    <div class="border-left border-bottom border-right">
+                      <ion-input clearInput [(ngModel)]="nama" value="clear me"></ion-input>
+                    </div>
+                    <div class="form-text"><i>Masukan Nama</i></div>
+                  </div>
+
+                    <div class="mb-3">
+                    <label class="form-label">Jurusan</label>
+                    <div class="border-left border-bottom border-right">
+                      <ion-input clearInput [(ngModel)]="jurusan" value="clear me"></ion-input>
+                    </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label">Prodi</label>
+                      <div class="border-left border-bottom border-right">
+                        <ion-input clearInput [(ngModel)]="prodi" value="clear me"></ion-input>
+                      </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label class="form-label">Kelas</label>
+                        <div class="border-left border-bottom border-right">
+                          <ion-input clearInput [(ngModel)]="kelas" value="clear me"></ion-input>
+                        </div>
+
+                    <div class="form-text"><i>Silahkan masukan dengan format kelas, ex: A / B /C</i></div>
+                  </div>
+
+                  <button type="submit" (click)="submit()" routerLink="./tab1" class="btn btn-primary">Simpan Data</button>
+        </ion-card-content>
+        </ion-card>
+
+</ion-content>

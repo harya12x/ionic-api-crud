@@ -1,0 +1,8 @@
+{
+  "name": "ionic_api",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "745b49d9"
+}
